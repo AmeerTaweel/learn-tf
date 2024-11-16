@@ -15,6 +15,7 @@ jobs:
           tofu_version: 1.8.5
       - run: ls
       - run: |
+          cd src
           tofu fmt
           tofu init
           tofu plan
