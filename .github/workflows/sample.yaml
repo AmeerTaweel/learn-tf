@@ -1,0 +1,17 @@
+name: "sample-workflow-for-learning"
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  steve-jobs:
+    runs-on: macos-latest
+    steps:
+      - name: Greet
+        run: echo "Hello Hello"
+      - name: Info
+        run: |
+          ls
+          pwd
