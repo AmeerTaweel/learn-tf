@@ -1,0 +1,5 @@
+# Direnv Cache
+.direnv/
+
+# Terraform
+src/.terraform
