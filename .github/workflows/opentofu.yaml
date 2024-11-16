@@ -1,0 +1,16 @@
+name: "infrastructure sync"
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  steve-jobs:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: opentofu/setup-opentofu@v1
+        with:
+          tofu_version: 1.8.5
+      - run: ls
