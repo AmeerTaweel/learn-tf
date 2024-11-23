@@ -25,6 +25,9 @@ resource "aws_instance" "web" {
   key_name = aws_key_pair.tf.key_name
   associate_public_ip_address = true  # Explicitly set
 
+  user_data_base64 = base64encode(file("./cloud-init.sh"))
+  # user_data = file("./cloud-init.sh")
+
   vpc_security_group_ids = [
     module.public_sg.security_group_id
   ]
