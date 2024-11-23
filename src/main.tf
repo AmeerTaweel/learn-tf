@@ -32,6 +32,11 @@ resource "aws_instance" "web" {
     module.public_sg.security_group_id
   ]
 
+  lifecycle {
+    ignore_changes = [user_data_base64]
+    # ignore_changes = [user_data]
+  }
+
   subnet_id = module.vpc.public_subnets[0]
 
   tags = {
