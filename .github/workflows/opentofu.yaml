@@ -1,9 +1,14 @@
 name: "infrastructure sync"
 
+# on:
+#   push:
+#     branches:
+#       - master
+
 on:
   push:
     branches:
-      - master
+      - my-gf
 
 jobs:
   steve-jobs:
